@@ -1,0 +1,30 @@
+version: "2.0"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: confirm course and always ask for question
+  steps:
+  - intent: answer_course
+  - action: utter_course_input_thanks
+  - action: utter_ask_question
+
+- rule: test action
+  steps:
+  - intent: query_instructor
+  - action: action_retrieve_instructor
+
+#- rule: Activate course form
+#  steps:
+#  - intent: answer_course
+#  - action: course_form
+#  - active_loop: course_form

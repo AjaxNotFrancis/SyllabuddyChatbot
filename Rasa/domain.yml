@@ -1,0 +1,79 @@
+version: "2.0"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - query_instructor
+  - answer_course
+
+entities:
+  - course
+
+slots:
+  course:
+    type: any
+
+actions:
+  - action_hello_world
+  - action_retrieve_instructor
+
+responses:
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_syllabuddy_greet:
+  - text: "Hey! What class can I help you with?"
+
+  utter_syllabuddy_happy:
+  - text: "Good to hear!"
+
+  utter_syllabuddy_sad:
+  - text: "Sorry to hear that."
+
+  utter_syllabuddy_canihelp:
+  - text: "Can I help answer any questions?"
+
+  utter_ask_course_form_course:
+  - text: "What course is this for?"
+
+  utter_ask_course:
+  - text: "What course is this for?"
+
+  utter_course_input_thanks:
+  - text: "{course}, got it."
+
+  utter_ask_question:
+  - text: "Whats your question?"
+
+  utter_temp_response:
+  - text: "The instructor for this class is {None}"
+
+
+
+config:
+  store_entities_as_slots: true
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
