@@ -1,5 +1,6 @@
-# Models (just retrain)
+# Rasa Models and Caches
 **/Rasa/models
+**/Rasa/actions/__pycache__
 
 # Environments
 venv/
