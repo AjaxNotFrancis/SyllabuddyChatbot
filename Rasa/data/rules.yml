@@ -18,10 +18,15 @@ rules:
   - action: utter_course_input_thanks
   - action: utter_ask_question
 
-- rule: test action
+- rule: query instructor
   steps:
   - intent: query_instructor
   - action: action_retrieve_instructor
+
+- rule: query zoom
+  steps:
+  - intent: query_zoom
+  - action: action_retrieve_zoom
 
 #- rule: Activate course form
 #  steps:

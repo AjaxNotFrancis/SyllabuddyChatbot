@@ -9,6 +9,7 @@ intents:
   - mood_unhappy
   - bot_challenge
   - query_instructor
+  - query_zoom
   - answer_course
 
 entities:
@@ -21,6 +22,7 @@ slots:
 actions:
   - action_hello_world
   - action_retrieve_instructor
+  - action_retrieve_zoom
 
 responses:
   utter_greet:

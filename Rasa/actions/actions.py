@@ -42,3 +42,17 @@ class ActionRetrieveInstructor(Action):
 
         return []
 
+
+class ActionRetrieveZoom(Action):
+
+    def name(self) -> Text:
+        return "action_retrieve_zoom"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        course = tracker.get_slot("course")
+        #dispatcher.utter_message(text="Server Response: " + course)
+        response = actions.SyllabusParser.find_zoom(course)
+        dispatcher.utter_message(text=response)
+
+        return []
+

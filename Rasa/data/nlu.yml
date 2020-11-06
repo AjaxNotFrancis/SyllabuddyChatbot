@@ -106,6 +106,16 @@ nlu:
     - teacher?
     - instructor?
 
+- intent: query_zoom
+  examples: |
+    - what is the zoom link for this class?
+    - what is the webex link for this class?
+    - zoom link?
+    - zoom?
+    - webex?
+    - video link?
+    - what is the meeting link?
+
 
 - regex: course
   examples: |

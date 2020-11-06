@@ -48,13 +48,13 @@ def find_instructor(course):
         return rasaSoup.find(string=re.compile("Instructor"))
 
 
+
 def find_zoom(course):
-    with open("Rasa/actions/Syllabi/" + course, encoding='utf8') as syllabus:
+    with open("actions/" + course + ".html", encoding='utf8') as syllabus:
         rasaSoup = BeautifulSoup(syllabus, 'html.parser')
 
-    if (rasaSoup.find(string=re.compile("Zoom"))).find_next('a').string is None:
+    # if (rasaSoup.find(string=re.compile("Zoom"))).find_next('a').string is None:
+    if (rasaSoup.find(string=re.compile("Zoom"))) is None:
         return "No zoom link found"
     else:
         return (rasaSoup.find(string=re.compile("Zoom"))).find_next('a').string
-
-
