@@ -28,6 +28,30 @@ rules:
   - intent: query_zoom
   - action: action_retrieve_zoom
 
+- rule: query prerequisites
+  steps:
+  - intent: query_prerequisites
+  - action: action_retrieve_prerequisites
+
+- rule: query textbook
+  steps:
+  - intent: query_textbook
+  - action: action_retrieve_textbook
+
+- rule: query email
+  steps:
+  - intent: query_email
+  - action: action_retrieve_email
+
+- rule: query office
+  steps:
+  - intent: query_office
+  - action: action_retrieve_office
+
+- rule: query phone
+  steps:
+  - intent: query_phone
+  - action: action_retrieve_phone
 #- rule: Activate course form
 #  steps:
 #  - intent: answer_course

@@ -12,7 +12,6 @@ from typing import Any, Text, Dict, List
 from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 
-
 import actions.SyllabusParser
 
 
@@ -36,7 +35,7 @@ class ActionRetrieveInstructor(Action):
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         course = tracker.get_slot("course")
-        #dispatcher.utter_message(text="Server Response: " + course)
+        # dispatcher.utter_message(text="Server Response: " + course)
         response = actions.SyllabusParser.find_instructor(course)
         dispatcher.utter_message(text=response)
 
@@ -50,9 +49,79 @@ class ActionRetrieveZoom(Action):
 
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         course = tracker.get_slot("course")
-        #dispatcher.utter_message(text="Server Response: " + course)
+        # dispatcher.utter_message(text="Server Response: " + course)
         response = actions.SyllabusParser.find_zoom(course)
         dispatcher.utter_message(text=response)
 
         return []
 
+
+class ActionRetrievePrerequisites(Action):
+
+    def name(self) -> Text:
+        return "action_retrieve_prerequisites"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        course = tracker.get_slot("course")
+        # dispatcher.utter_message(text="Server Response: " + course)
+        response = actions.SyllabusParser.find_prerequisites(course)
+        dispatcher.utter_message(text=response)
+
+        return []
+
+
+class ActionRetrieveTextbook(Action):
+
+    def name(self) -> Text:
+        return "action_retrieve_textbook"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[
+        Dict[Text, Any]]:
+        course = tracker.get_slot("course")
+        # dispatcher.utter_message(text="Server Response: " + course)
+        response = actions.SyllabusParser.find_textbook(course)
+        dispatcher.utter_message(text=response)
+
+        return []
+
+
+class ActionRetrieveEmail(Action):
+
+    def name(self) -> Text:
+        return "action_retrieve_email"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        course = tracker.get_slot("course")
+        #dispatcher.utter_message(text="Server Response: " + course)
+        response = actions.SyllabusParser.find_email(course)
+        dispatcher.utter_message(text=response)
+
+        return []
+
+
+class ActionRetrieveOffice(Action):
+
+    def name(self) -> Text:
+        return "action_retrieve_office"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        course = tracker.get_slot("course")
+        #dispatcher.utter_message(text="Server Response: " + course)
+        response = actions.SyllabusParser.find_office(course)
+        dispatcher.utter_message(text=response)
+
+        return []
+
+
+class ActionRetrievePhone(Action):
+
+    def name(self) -> Text:
+        return "action_retrieve_phone"
+
+    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        course = tracker.get_slot("course")
+        #dispatcher.utter_message(text="Server Response: " + course)
+        response = actions.SyllabusParser.find_phone(course)
+        dispatcher.utter_message(text=response)
+
+        return []

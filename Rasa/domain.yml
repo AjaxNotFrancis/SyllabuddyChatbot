@@ -10,6 +10,11 @@ intents:
   - bot_challenge
   - query_instructor
   - query_zoom
+  - query_prerequisites
+  - query_textbook
+  - query_email
+  - query_office
+  - query_phone
   - answer_course
 
 entities:
@@ -23,6 +28,11 @@ actions:
   - action_hello_world
   - action_retrieve_instructor
   - action_retrieve_zoom
+  - action_retrieve_prerequisites
+  - action_retrieve_textbook
+  - action_retrieve_email
+  - action_retrieve_office
+  - action_retrieve_phone
 
 responses:
   utter_greet:
