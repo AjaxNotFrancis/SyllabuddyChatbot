@@ -10,7 +10,7 @@
 `pip3 install rasa`
 `pip3 install beautifulsoup4`
 
-4. Wait for them to install, it might take a minute to download and install all the dependencies. If you run into any missing dependencies or other issues, google it!
+4. Wait for them to install, it might take a minute to download and install all the dependencies. If you run into any missing dependencies or other issues, google it! One of the issues we ran into was some missing C++ build tools needed for "NumPy" or something. It provided a link within the error message to download them, so read any errors carefully!
 
 5a. Initialise the directory as a git repo using `git init`
 
