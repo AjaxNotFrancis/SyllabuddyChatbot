@@ -10,9 +10,11 @@
 `pip3 install rasa`
 `pip3 install beautifulsoup4`
 
-4. Wait for them to install, it might take a minute to download and install all the dependencies
+4. Wait for them to install, it might take a minute to download and install all the dependencies. If you run into any missing dependencies or other issues, google it!
 
-5. Now, still in terminal, use the following command to get the necessary files from github:
+5a. Initialise the directory as a git repo using `git init`
+
+5b. Now, still in terminal, use the following command to get the necessary files from github:
 `git pull https://github.com/AjaxNotFrancis/SyllabuddyChatbot.git main`
 
 6. There should be a new folder in the directory, Rasa, with a bunch of files and folders. This is where Rasa's training data and configuration files are located. Still in terminal, change directory to this Rasa folder with:
